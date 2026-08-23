@@ -1,0 +1,20 @@
+{
+  "common": {
+    "brand": "SHIFAA AI",
+    "tagline": "Intelligent Healthcare. One Connected Patient Journey.",
+    "language": "العربية",
+    "languageLabel": "Language",
+    "getStarted": "Get started",
+    "signIn": "Sign in"
+  },
+  "home": {
+    "eyebrow": "Intelligent healthcare, connected",
+    "title": "A clearer way to care for your health.",
+    "description": "SHIFAA AI brings your health information, medication guidance, records, and clinical support into one trusted journey.",
+    "patient": "Patient experience",
+    "doctor": "Doctor platform",
+    "patientDescription": "Understand your health and take the next right step.",
+    "doctorDescription": "See what needs your attention across every patient.",
+    "disclaimer": "AI-assisted information is not a diagnosis. Always consult a qualified healthcare professional."
+  }
+}
