@@ -90,7 +90,7 @@ function TestimonialsSection() {
 
                   <figcaption className="mt-5 flex items-center gap-3">
                     <Image
-                      src={`/doctors/doctor${(index % 3) + 1}.jpg`}
+                      src={`/pepole/pep${(index % 6) + 1}.jpg`}
                       alt=""
                       width={48}
                       height={48}

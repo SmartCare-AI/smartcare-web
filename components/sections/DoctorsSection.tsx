@@ -73,7 +73,7 @@ function DoctorsSection() {
                   className="group rounded-3xl border border-slate-100 bg-white p-5 text-center shadow-[0_12px_32px_rgba(15,85,95,0.08)] transition-shadow hover:shadow-[0_18px_38px_rgba(15,85,95,0.15)]"
                 >
                   <Image
-                    src={`/doctors/doctor${(index % 3) + 1}.jpg`}
+                    src={`/doctors/doctor${(index % 6) + 1}.jpg`}
                     alt={t(`doctors.${doctor}.name`)}
                     width={320}
                     height={320}

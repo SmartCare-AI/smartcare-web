@@ -98,13 +98,13 @@
           "description": "Helps build a healthier eating plan around your needs."
         },
         "youssef": {
-          "name": "Dr. Youssef Ali",
+          "name": "Dr. Mena Youssef",
           "specialty": "Internal medicine consultant",
           "rating": "4.8",
           "description": "Focused on every detail of your health journey."
         },
         "mariam": {
-          "name": "Dr. Mariam Adel",
+          "name": "Dr. Abdallah Atef",
           "specialty": "Pediatrics specialist",
           "rating": "4.9",
           "description": "Gentle, safe care for your child at every stage."
@@ -117,7 +117,7 @@
         "first": {
           "quote": "All my health information is in one place, and the reminders have helped a lot.",
           "initial": "M",
-          "name": "Mona Ahmed",
+          "name": "Ahmed Ali",
           "role": "Platform member"
         },
         "second": {
@@ -129,19 +129,19 @@
         "third": {
           "quote": "A clear, reassuring experience. My health data feels organized and secure.",
           "initial": "L",
-          "name": "Laila Hassan",
+          "name": "Mohamed Lotfy",
           "role": "Platform member"
         },
         "fourth": {
           "quote": "It is now easy to follow everything related to my family’s health in one place.",
           "initial": "S",
-          "name": "Sara Adel",
+          "name": "Mohamed Adel",
           "role": "Platform member"
         },
         "fifth": {
           "quote": "A fast, organized experience that made it easier to follow my care plan.",
           "initial": "R",
-          "name": "Ramy Fouad",
+          "name": "Rania Fouad",
           "role": "Platform member"
         }
       },

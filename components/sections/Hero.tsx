@@ -20,7 +20,10 @@ function Hero() {
   const { locale } = useParams<{ locale: string }>();
   const t = useTranslations("home");
   return (
-    <section id="hero" className="relative scroll-mt-24 overflow-hidden bg-[radial-gradient(circle_at_52%_44%,rgba(167,243,240,0.7),transparent_27%),linear-gradient(180deg,#fbfefd_0%,#e8f8f7_100%)] px-4 pb-28 pt-10 sm:px-6 sm:pt-14 lg:pb-36 lg:pt-16">
+    <section
+      id="hero"
+      className="relative scroll-mt-24 overflow-hidden bg-[radial-gradient(circle_at_52%_44%,rgba(167,243,240,0.7),transparent_27%),linear-gradient(180deg,#fbfefd_0%,#e8f8f7_100%)] px-4 pb-28 pt-10 sm:px-6 sm:pt-14 lg:pb-36 lg:pt-16"
+    >
       <div className="pointer-events-none absolute -left-24 top-16 size-72 rounded-full bg-white/70 blur-3xl" />
       <div className="pointer-events-none absolute -right-24 bottom-0 size-96 rounded-full bg-[var(--Accent)]/10 blur-3xl" />
       <Image

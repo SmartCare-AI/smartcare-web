@@ -56,7 +56,10 @@ function SmartCare() {
             </p>
             <div className="mt-6 grid gap-3 text-right sm:grid-cols-3">
               {["insight", "followUp", "reminders"].map((item) => (
-                <div key={item} className="rounded-xl border border-white/80 bg-white/65 px-3 py-3 text-xs font-bold text-slate-700 shadow-sm">
+                <div
+                  key={item}
+                  className="rounded-xl border border-white/80 bg-white/65 px-3 py-3 text-xs font-bold text-slate-700 shadow-sm"
+                >
                   {t(`highlights.${item}`)}
                 </div>
               ))}
