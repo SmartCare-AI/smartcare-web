@@ -3,6 +3,9 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import NavBar from "@/components/layout/NavBar";
+import Footer from "@/components/layout/Footer";
+import DirectionSync from "@/components/layout/DirectionSync";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -18,12 +21,12 @@ export async function generateMetadata({
   const home = await getTranslations({ locale, namespace: "home" });
 
   const brand = common("brand");
-  const title = home("title");
+  const title = String(home.raw("title")).replace(/<[^>]+>/g, "");
   const description = home("description");
 
   const keywords = isArabic
     ? [
-        "شفاء AI",
+        "شفاء",
         "رعاية صحية ذكية",
         "منصة طبية",
         "ملف طبي",
@@ -32,7 +35,7 @@ export async function generateMetadata({
         "ذكاء اصطناعي طبي",
       ]
     : [
-        "SHIFAA AI",
+        "SHIFAA",
         "intelligent healthcare",
         "healthcare platform",
         "medical records",
@@ -87,5 +90,14 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  return <NextIntlClientProvider>{children}</NextIntlClientProvider>;
+  return (
+    <NextIntlClientProvider>
+      <DirectionSync />
+      <div className="min-h-screen flex flex-col">
+        <NavBar />
+        <main className="flex-1">{children}</main>
+        <Footer />
+      </div>
+    </NextIntlClientProvider>
+  );
 }

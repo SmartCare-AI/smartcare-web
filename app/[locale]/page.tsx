@@ -1,8 +1,17 @@
-import { getTranslations } from "next-intl/server";
-import Link from "next/link";
+import Hero from "@/components/sections/Hero";
+import HealthFeatures from "@/components/sections/HealthFeatures";
+import SmartCare from "@/components/sections/SmartCare";
+import PlatformSections from "@/components/sections/PlatformSections";
 
 export default async function LocaleHome({ params }: PageProps<"/[locale]">) {
-  const { locale } = await params;
+  await params;
 
-  return <div></div>;
+  return (
+    <div>
+      <Hero />
+      <HealthFeatures />
+      <SmartCare />
+      <PlatformSections />
+    </div>
+  );
 }

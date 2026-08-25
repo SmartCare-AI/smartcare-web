@@ -1,20 +1,105 @@
 {
   "common": {
-    "brand": "SHIFAA AI",
+    "brand": "SHIFAA",
     "tagline": "Intelligent Healthcare. One Connected Patient Journey.",
     "language": "العربية",
     "languageLabel": "Language",
     "getStarted": "Get started",
-    "signIn": "Sign in"
+    "signIn": "Sign in",
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "how-it-works": "How it works",
+      "doctors": "Doctors",
+      "about": "About us",
+      "faq": "FAQ",
+      "contact": "Contact"
+    }
   },
   "home": {
     "eyebrow": "Intelligent healthcare, connected",
-    "title": "A clearer way to care for your health.",
-    "description": "SHIFAA AI brings your health information, medication guidance, records, and clinical support into one trusted journey.",
+    "title": "A <accent>clearer</accent> way to care for <highlight>your health</highlight>.",
+    "description": "SHIFAA brings your health information, medication guidance, records, and clinical support into one trusted journey.",
     "patient": "Patient experience",
     "doctor": "Doctor platform",
     "patientDescription": "Understand your health and take the next right step.",
     "doctorDescription": "See what needs your attention across every patient.",
-    "disclaimer": "AI-assisted information is not a diagnosis. Always consult a qualified healthcare professional."
+    "disclaimer": "AI-assisted information is not a diagnosis. Always consult a qualified healthcare professional.",
+    "primaryAction": "Start your journey",
+    "secondaryAction": "See how it works",
+    "trustNote": "Your privacy and health come first",
+    "visualAlt": "SHIFAA healthcare platform on a smartphone and smartwatch",
+    "phoneAlt": "SHIFAA app on a smartphone",
+    "logoAlt": "SHIFAA healthcare logo",
+    "floatingDoctor": "Medical support",
+    "floatingCare": "Trusted care",
+    "floatingRecords": "Health records",
+    "floatingMedication": "Medication",
+    "floatingFollowup": "Follow-up",
+    "floatingVitals": "Your vitals",
+    "featuresTitle": "Everything you need for better health",
+    "features": {
+      "care": {
+        "title": "Connected care",
+        "description": "Your healthcare needs in one place"
+      },
+      "records": {
+        "title": "Medical records",
+        "description": "Organized and secure health data"
+      },
+      "medications": {
+        "title": "Clear medications",
+        "description": "Simpler reminders and guidance"
+      },
+      "support": {
+        "title": "Doctor access",
+        "description": "The right support when needed"
+      },
+      "privacy": {
+        "title": "Privacy first",
+        "description": "Your data stays protected"
+      }
+    },
+    "smartCare": {
+      "title": "Smart insights, personal care",
+      "description": "SHIFAA AI turns your health data into simple, useful insights so you can follow your medication, appointments, and care plan in one place.",
+      "action": "Explore more",
+      "phoneAlt": "SHIFAA healthcare app",
+      "bloodPressure": "Blood pressure 120/80",
+      "medication": "Medication: Metformin 10 PM",
+      "doctor": "Last visit: Dr. Ahmed",
+      "highlights": {"insight": "Simple insights", "followUp": "Continuous follow-up", "reminders": "Smart reminders"}
+    },
+    "platform": {
+      "doctors": {"eyebrow": "Expertise you can trust", "title": "Meet our exceptional doctors", "description": "A specialist team that combines clinical experience with genuine care.", "sara": {"name": "Dr. Sara Mahmoud", "specialty": "Family medicine consultant", "rating": "4.9", "description": "Practical support for your daily health and preventive plan."}, "omar": {"name": "Dr. Omar Khaled", "specialty": "Cardiology consultant", "rating": "4.8", "description": "Experienced in heart-health follow-up and personalized care."}, "nour": {"name": "Dr. Nour Ahmed", "specialty": "Nutrition specialist", "rating": "4.9", "description": "Helps build a healthier eating plan around your needs."}, "youssef": {"name": "Dr. Youssef Ali", "specialty": "Internal medicine consultant", "rating": "4.8", "description": "Focused on every detail of your health journey."}, "mariam": {"name": "Dr. Mariam Adel", "specialty": "Pediatrics specialist", "rating": "4.9", "description": "Gentle, safe care for your child at every stage."}},
+      "testimonials": {"eyebrow": "Real experiences", "title": "What do our members say?", "description": "Stories from people who made health easier to understand with SHIFAA.", "first": {"quote": "All my health information is in one place, and the reminders have helped a lot.", "initial": "M", "name": "Mona Ahmed", "role": "Platform member"}, "second": {"quote": "Contacting my doctor and following medications is much easier now.", "initial": "K", "name": "Khaled Samy", "role": "Platform member"}, "third": {"quote": "A clear, reassuring experience. My health data feels organized and secure.", "initial": "L", "name": "Laila Hassan", "role": "Platform member"}, "fourth": {"quote": "It is now easy to follow everything related to my family’s health in one place.", "initial": "S", "name": "Sara Adel", "role": "Platform member"}, "fifth": {"quote": "A fast, organized experience that made it easier to follow my care plan.", "initial": "R", "name": "Ramy Fouad", "role": "Platform member"}},
+      "partners": {"eyebrow": "An integrated health network", "title": "Our trusted partners", "description": "We work with trusted health organizations to deliver connected care.", "hospital": "Hospitals", "labs": "Laboratories", "pharmacy": "Pharmacies", "insurance": "Insurance providers"},
+      "faq": {"title": "Frequently asked questions", "description": "Everything you need to know about SHIFAA.", "records": {"question": "How do I save my medical records?", "answer": "Add and follow your records in one organized, easy-to-use place."}, "privacy": {"question": "Is my health data secure?", "answer": "We use strong safeguards to protect the privacy of your health data."}, "doctors": {"question": "How can I contact my doctor?", "answer": "Access consultation and follow-up services through the platform."}, "medications": {"question": "Can I track my medications?", "answer": "Yes, the platform helps organize your medicines and important reminders."}},
+      "security": {"title": "Your security and privacy come first", "description": "SHIFAA is designed around protecting your data and giving you full control of your health journey.", "encryption": "Strong data encryption", "control": "Full control of your data", "verified": "Trusted health organizations", "care": "Care that respects privacy"}
+    }
+  },
+  "footer": {
+    "brand": "SHIFAA",
+    "description": "Smart healthcare that helps you understand your health and make better decisions at every step.",
+    "quickLinks": "Quick links",
+    "platform": "Platform",
+    "patient": "Patient experience",
+    "doctor": "Doctor platform",
+    "caregiver": "Family care",
+    "emergency": "Emergency",
+    "downloadTitle": "SHIFAA, wherever you are",
+    "downloadDescription": "Download the SHIFAA app and manage your healthcare journey from your phone.",
+    "downloadOn": "Download on the",
+    "getItOn": "Get it on",
+    "privacy": "Privacy",
+    "terms": "Terms & conditions",
+    "copyright": "© {year} SHIFAA. All rights reserved.",
+    "links": {
+      "home": "Home",
+      "services": "Services",
+      "how-it-works": "How it works",
+      "doctors": "Doctors",
+      "about": "About us"
+    }
   }
 }
