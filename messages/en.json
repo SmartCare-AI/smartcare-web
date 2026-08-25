@@ -176,12 +176,14 @@
         }
       },
       "security": {
+        "eyebrow": "Security & Privacy",
         "title": "Your security and privacy come first",
         "description": "SHIFAA is designed around protecting your data and giving you full control of your health journey.",
         "encryption": "Strong data encryption",
         "control": "Full control of your data",
         "verified": "Trusted health organizations",
-        "care": "Care that respects privacy"
+        "care": "Care that respects privacy",
+        "privacy": "Your data is protected and encrypted"
       }
     }
   },
