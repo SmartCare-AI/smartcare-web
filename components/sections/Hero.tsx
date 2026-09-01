@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import {
   ArrowLeft,
+  ArrowRight,
   Clock3,
   FileHeart,
   HeartPulse,
@@ -17,8 +18,12 @@ import { useTranslations } from "next-intl";
 import ActionButton from "@/components/common/ActionButton";
 
 function Hero() {
+  // Language detection and translation setup
   const { locale } = useParams<{ locale: string }>();
   const t = useTranslations("home");
+  const isRTL = locale === "ar";
+  const SecondaryArrow = isRTL ? ArrowLeft : ArrowRight;
+
   return (
     <section
       id="hero"
@@ -47,6 +52,7 @@ function Hero() {
         dir="ltr"
         className="relative mx-auto grid max-w-6xl items-center gap-4 lg:grid-cols-[1fr_1fr] lg:gap-4"
       >
+        {/* The Right Part */}
         <motion.div
           initial={{ opacity: 0, x: -28 }}
           animate={{ opacity: 1, x: 0 }}
@@ -82,10 +88,7 @@ function Hero() {
             </ActionButton>
             <ActionButton href={`/${locale}/how-it-works`} variant="outline">
               {t("secondaryAction")}
-              <ArrowLeft
-                className="size-4 rtl:rotate-0 ltr:rotate-180"
-                aria-hidden="true"
-              />
+              <SecondaryArrow className="size-4" aria-hidden="true" />
             </ActionButton>
           </div>
 
@@ -97,7 +100,7 @@ function Hero() {
             {t("trustNote")}
           </div>
         </motion.div>
-
+        {/* The Left Part */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9, y: 18 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -113,7 +116,7 @@ function Hero() {
             className="relative z-10 w-[72%] max-w-[330px] drop-shadow-[0_24px_22px_rgba(0,100,110,0.28)]"
             priority
           />
-
+          {/* Floating icons */}
           {[
             {
               label: t("floatingDoctor"),
@@ -146,17 +149,25 @@ function Hero() {
               className: "bottom-0 left-[calc(50%-41px)] hidden lg:flex",
             },
           ].map((item, index) => (
+            // Floating icons with animation
             <motion.div
               key={item.label}
-              animate={{ y: [0, -8, 0] }}
+              animate={{
+                y: [0, -6, 0],
+                x: [0, 1.5, 0],
+                rotate: [0, 1.5, 0],
+                scale: [1, 1.02, 1],
+              }}
               transition={{
-                duration: 3.2 + index * 0.5,
+                duration: 5 + index * 0.7,
                 repeat: Infinity,
                 ease: "easeInOut",
+                delay: index * 0.15,
               }}
-              className={`absolute z-30 flex size-[72px] flex-col items-center justify-center gap-1 rounded-full border border-white/90 bg-white/90 px-1 text-center text-[9px] font-bold leading-3 text-slate-700 shadow-[0_14px_30px_rgba(0,100,110,0.2)] backdrop-blur-sm sm:size-[82px] sm:text-[10px] ${item.className}`}
+              className={`absolute z-30 flex size-[72px] flex-col items-center justify-center gap-1 rounded-full border border-white/90 bg-white/90 px-1 text-center text-[9px] font-bold leading-3 text-slate-700 shadow-[0_12px_24px_rgba(15,118,110,0.13)] backdrop-blur-sm sm:size-[82px] sm:text-[10px] ${item.className}`}
+              style={{ willChange: "transform" }}
             >
-              <span className="flex size-7 items-center justify-center rounded-full bg-[var(--Primary)]/10 text-[var(--Primary)]">
+              <span className="flex size-7 items-center justify-center rounded-full bg-[var(--Primary)]/10 text-[var(--Primary)] transition-transform duration-300 hover:scale-105">
                 {item.icon}
               </span>
               {item.label}

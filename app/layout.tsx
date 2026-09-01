@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getLocale } from "next-intl/server";
 import { Geist, Geist_Mono } from "next/font/google";
+import { getLocaleDirection } from "@/i18n/routing";
 import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.startsWith("http")
@@ -20,15 +21,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "SHIFAA AI",
-    template: "%s | SHIFAA AI",
+    default: "SHIFAA",
+    template: "%s | SHIFAA",
   },
   description: "Intelligent Healthcare. One Connected Patient Journey.",
-  applicationName: "SHIFAA AI",
+  applicationName: "SHIFAA",
   referrer: "origin-when-cross-origin",
-  authors: [{ name: "SHIFAA AI Team" }],
-  creator: "SHIFAA AI",
-  publisher: "SHIFAA AI",
+  authors: [{ name: "SHIFAA Team" }],
+  creator: "SHIFAA",
+  publisher: "SHIFAA",
   formatDetection: {
     email: false,
     address: false,
@@ -53,7 +54,7 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang={locale}
-      dir={locale === "ar" ? "rtl" : "ltr"}
+      dir={getLocaleDirection(locale)}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>

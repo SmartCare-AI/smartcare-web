@@ -50,9 +50,10 @@ function StoreBadge({
 function Footer() {
   const { locale } = useParams<{ locale: string }>();
   const t = useTranslations();
+  const isRTL = locale === "ar";
 
   return (
-    <footer id="contact">
+    <footer id="contact" dir={isRTL ? "rtl" : "ltr"}>
       <div className="mx-auto w-full overflow-hidden rounded-[2rem] border border-slate-100 bg-white shadow-[0_8px_30px_rgba(15,23,42,0.08)]">
         <div className="px-6 pb-7 pt-12 lg:px-10 lg:pt-14">
           <motion.div
@@ -101,7 +102,9 @@ function Footer() {
                     className="group inline-flex items-center gap-1 text-sm text-slate-500 transition-colors hover:text-[var(--Primary)]"
                   >
                     {t(`footer.links.${item.labelKey.replace("nav.", "")}`)}
-                    <ArrowUpRight className="size-3 opacity-0 transition-opacity group-hover:opacity-100 rtl:-rotate-90" />
+                    <ArrowUpRight
+                      className={`size-3 opacity-0 transition-opacity group-hover:opacity-100 ${isRTL ? "rotate-90" : ""}`}
+                    />
                   </Link>
                 ))}
               </nav>

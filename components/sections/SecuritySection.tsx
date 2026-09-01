@@ -1,15 +1,19 @@
 "use client";
 
+import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { LockKeyhole, ShieldCheck } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 function SecuritySection() {
+  const { locale } = useParams<{ locale?: string }>();
   const t = useTranslations("home.platform");
+  const isRTL = locale === "ar";
 
   return (
     <section
       id="privacy"
+      dir={isRTL ? "rtl" : "ltr"}
       className="relative overflow-hidden px-4 py-16 sm:px-6 lg:py-24"
     >
       <div className="mx-auto max-w-6xl">
@@ -20,8 +24,10 @@ function SecuritySection() {
 
           <div className="relative grid gap-12 px-6 py-10 sm:px-10 sm:py-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:px-14 lg:py-16">
             {/* Content */}
-            <div className="flex flex-col justify-center text-center lg:text-right">
-              <span className="mx-auto inline-flex size-14 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600 lg:mx-0 lg:ml-auto">
+            <div className="flex flex-col justify-center text-center lg:text-start">
+              <span
+                className={`mx-auto inline-flex size-14 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600 lg:mx-0 ${isRTL ? "lg:ml-auto" : "lg:mr-auto"}`}
+              >
                 <LockKeyhole className="size-7" />
               </span>
 

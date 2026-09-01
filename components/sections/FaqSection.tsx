@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useParams } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, HeartHandshake } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -8,11 +9,17 @@ import { useTranslations } from "next-intl";
 const faqKeys = ["records", "privacy", "doctors", "medications"] as const;
 
 function FaqSection() {
+  const { locale } = useParams<{ locale?: string }>();
   const t = useTranslations("home.platform");
   const [activeFaq, setActiveFaq] = useState<string | null>("records");
+  const isRTL = locale === "ar";
 
   return (
-    <section id="faq" className="bg-slate-50 px-4 py-16 sm:px-6 lg:py-24">
+    <section
+      id="faq"
+      dir={isRTL ? "rtl" : "ltr"}
+      className="bg-slate-50 px-4 py-16 sm:px-6 lg:py-24"
+    >
       <div className="mx-auto max-w-4xl">
         {/* FAQ Heading */}
         <div className="text-center">
@@ -62,7 +69,7 @@ function FaqSection() {
                 <button
                   type="button"
                   onClick={() => setActiveFaq(isOpen ? null : faq)}
-                  className="flex w-full items-center justify-between gap-5 px-5 py-5 text-right sm:px-6"
+                  className="flex w-full items-center justify-between gap-5 px-5 py-5 text-start sm:px-6"
                 >
                   <span className="text-sm font-bold text-slate-800 sm:text-base">
                     {t(`faq.${faq}.question`)}

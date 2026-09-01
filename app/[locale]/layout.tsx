@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { routing } from "@/i18n/routing";
+import { getLocaleDirection, routing } from "@/i18n/routing";
 import NavBar from "@/components/layout/NavBar";
 import Footer from "@/components/layout/Footer";
 import DirectionSync from "@/components/layout/DirectionSync";
@@ -15,7 +15,7 @@ export async function generateMetadata({
   params,
 }: LayoutProps<"/[locale]">): Promise<Metadata> {
   const { locale } = await params;
-  const isArabic = locale === "ar";
+  const isRTL = getLocaleDirection(locale) === "rtl";
 
   const common = await getTranslations({ locale, namespace: "common" });
   const home = await getTranslations({ locale, namespace: "home" });
@@ -24,7 +24,7 @@ export async function generateMetadata({
   const title = String(home.raw("title")).replace(/<[^>]+>/g, "");
   const description = home("description");
 
-  const keywords = isArabic
+  const keywords = isRTL
     ? [
         "شفاء",
         "رعاية صحية ذكية",
@@ -60,7 +60,7 @@ export async function generateMetadata({
       description,
       type: "website",
       siteName: brand,
-      locale: isArabic ? "ar_EG" : "en_US",
+      locale: isRTL ? "ar_EG" : "en_US",
       url: `/${locale}`,
       images: [
         {

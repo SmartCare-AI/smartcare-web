@@ -38,6 +38,27 @@
     "floatingFollowup": "متابعة",
     "floatingVitals": "مؤشراتك",
     "featuresTitle": "كل ما تحتاجه لصحة أفضل",
+    "patientJourney": {
+      "eyebrow": "رحلة المريض",
+      "overviewTitle": "ملخص صحتك",
+      "title": "مكان واحد لفهم أهم ما يهمك اليوم",
+      "description": "يجمع شفاء بين أدويتك القادمة، آخر تحديثات صحتك، تنبيهات الذكاء الاصطناعي، ومتابعة الرعاية في رؤية واضحة ومباشرة تدعم العناية اليومية.",
+      "vitals": "مؤشراتك",
+      "stable": "مستقر",
+      "nextMedication": "الدواء القادم",
+      "recovery": "تقدم التعافي",
+      "recoveryText": "على المسار الصحيح",
+      "aiInsight": "معلومة ذكية",
+      "aiSummary": "تم ملاحظة تغير طفيف في الاتجاه",
+      "primaryAction": "عرض اللوحة الكاملة",
+      "secondaryAction": "عرض خطة الرعاية",
+      "items": {
+        "overview": "ملخص الصحة",
+        "records": "السجلات الطبية",
+        "alerts": "التنبيهات",
+        "care": "فريق الرعاية"
+      }
+    },
     "features": {
       "care": {
         "title": "رعاية متكاملة",

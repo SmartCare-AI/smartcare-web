@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { useParams } from "next/navigation";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type ActionButtonProps = {
@@ -15,6 +16,10 @@ export default function ActionButton({
   variant = "primary",
   className,
 }: ActionButtonProps) {
+  const { locale } = useParams<{ locale?: string }>();
+  const isRTL = locale === "ar";
+  const ArrowIcon = isRTL ? ArrowLeft : ArrowRight;
+
   return (
     <Link
       href={href}
@@ -28,10 +33,7 @@ export default function ActionButton({
     >
       {children}
       {variant === "primary" ? (
-        <ArrowLeft
-          className="size-4 rtl:rotate-0 ltr:rotate-180"
-          aria-hidden="true"
-        />
+        <ArrowIcon className="size-4" aria-hidden="true" />
       ) : null}
     </Link>
   );

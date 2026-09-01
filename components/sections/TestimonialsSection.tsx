@@ -76,7 +76,7 @@ function TestimonialsSection() {
                     duration: 0.4,
                     delay: index * 0.08,
                   }}
-                  className="h-full rounded-3xl border border-white bg-white/85 p-6 shadow-sm"
+                  className="flex h-56 flex-col rounded-3xl border border-white bg-white/85 p-6 shadow-sm"
                 >
                   <div className="flex gap-1 text-amber-400">
                     {Array.from({ length: 5 }, (_, star) => (
@@ -84,7 +84,7 @@ function TestimonialsSection() {
                     ))}
                   </div>
 
-                  <blockquote className="mt-4 text-sm leading-7 text-slate-600">
+                  <blockquote className="mt-4 flex-1 text-sm leading-7 text-slate-600">
                     &ldquo;{t(`testimonials.${testimonial}.quote`)}&rdquo;
                   </blockquote>
 

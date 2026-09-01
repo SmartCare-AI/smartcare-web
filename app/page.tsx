@@ -1,5 +1,7 @@
-import Image from "next/image";
+import { redirect } from "next/navigation";
+
+import { routing } from "@/i18n/routing";
 
 export default function Home() {
-  return <div>Hello World</div>;
+  redirect(`/${routing.defaultLocale}`);
 }

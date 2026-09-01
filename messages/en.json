@@ -38,6 +38,27 @@
     "floatingFollowup": "Follow-up",
     "floatingVitals": "Your vitals",
     "featuresTitle": "Everything you need for better health",
+    "patientJourney": {
+      "eyebrow": "Patient journey",
+      "overviewTitle": "Your health overview",
+      "title": "One place to understand what matters most today",
+      "description": "SHIFAA keeps your next medication, recent health updates, AI insights, and follow-up actions visible in a calm, actionable view designed to support everyday care.",
+      "vitals": "Vitals",
+      "stable": "Stable",
+      "nextMedication": "Next medication",
+      "recovery": "Recovery progress",
+      "recoveryText": "Well on track",
+      "aiInsight": "AI insight",
+      "aiSummary": "Slight trend change noticed",
+      "primaryAction": "View full dashboard",
+      "secondaryAction": "See care plan",
+      "items": {
+        "overview": "Health overview",
+        "records": "Medical records",
+        "alerts": "Alerts",
+        "care": "Care team"
+      }
+    },
     "features": {
       "care": {
         "title": "Connected care",

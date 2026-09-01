@@ -70,30 +70,32 @@ function DoctorsSection() {
                     duration: 0.45,
                     delay: index * 0.08,
                   }}
-                  className="group rounded-3xl border border-slate-100 bg-white p-5 text-center shadow-[0_12px_32px_rgba(15,85,95,0.08)] transition-shadow hover:shadow-[0_18px_38px_rgba(15,85,95,0.15)]"
+                  className="group flex flex-col rounded-3xl border border-slate-100 bg-white p-5 text-center shadow-[0_12px_32px_rgba(15,85,95,0.08)] transition-shadow hover:shadow-[0_18px_38px_rgba(15,85,95,0.15)]"
                 >
-                  <Image
-                    src={`/doctors/doctor${(index % 6) + 1}.jpg`}
-                    alt={t(`doctors.${doctor}.name`)}
-                    width={320}
-                    height={320}
-                    className="mx-auto aspect-square w-full rounded-2xl object-cover"
-                  />
+                  <div className="flex-1">
+                    <Image
+                      src={`/doctors/doctor${(index % 8) + 1}.jpg`}
+                      alt={t(`doctors.${doctor}.name`)}
+                      width={320}
+                      height={320}
+                      className="mx-auto aspect-square w-full rounded-2xl object-cover"
+                    />
 
-                  <h3 className="mt-5 text-lg font-bold text-[var(--TextMain)]">
-                    {t(`doctors.${doctor}.name`)}
-                  </h3>
+                    <h3 className="mt-5 text-lg font-bold text-[var(--TextMain)]">
+                      {t(`doctors.${doctor}.name`)}
+                    </h3>
 
-                  <p className="mt-1 text-sm font-medium text-[var(--Primary)]">
-                    {t(`doctors.${doctor}.specialty`)}
-                  </p>
+                    <p className="mt-1 text-sm font-medium text-[var(--Primary)]">
+                      {t(`doctors.${doctor}.specialty`)}
+                    </p>
 
-                  <div className="mx-auto mt-4 flex w-fit items-center gap-1 rounded-full bg-amber-50 px-3 py-1 text-xs font-bold text-amber-600">
-                    <Star className="size-3.5 fill-current" />
-                    {t(`doctors.${doctor}.rating`)}
+                    <div className="mx-auto mt-4 flex w-fit items-center gap-1 rounded-full bg-amber-50 px-3 py-1 text-xs font-bold text-amber-600">
+                      <Star className="size-3.5 fill-current" />
+                      {t(`doctors.${doctor}.rating`)}
+                    </div>
                   </div>
 
-                  <p className="mt-4 text-sm leading-6 text-slate-500">
+                  <p className="mt-4 flex-1 text-sm leading-6 text-slate-500">
                     {t(`doctors.${doctor}.description`)}
                   </p>
                 </motion.article>

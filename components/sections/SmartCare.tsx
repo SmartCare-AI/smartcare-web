@@ -1,13 +1,16 @@
 "use client";
 
 import Image from "next/image";
+import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { BrainCircuit } from "lucide-react";
 import { useTranslations } from "next-intl";
 import ActionButton from "@/components/common/ActionButton";
 
 function SmartCare() {
+  const { locale } = useParams<{ locale?: string }>();
   const t = useTranslations("home.smartCare");
+  const isRTL = locale === "ar";
 
   return (
     <section id="services" className="scroll-mt-24 px-4 py-20 sm:px-6 lg:py-32">
@@ -16,7 +19,7 @@ function SmartCare() {
         <div className="pointer-events-none absolute -right-14 -bottom-20 size-64 rounded-full bg-[var(--Secondary)]/10 blur-3xl" />
 
         <div
-          dir="ltr"
+          dir={isRTL ? "rtl" : "ltr"}
           id="how-it-works"
           className="relative scroll-mt-24 grid items-center gap-8 lg:grid-cols-[1fr_1.05fr] lg:gap-20"
         >
@@ -42,8 +45,8 @@ function SmartCare() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.55, delay: 0.08, ease: "easeOut" }}
-            dir="rtl"
-            className="text-center lg:text-right"
+            dir={isRTL ? "rtl" : "ltr"}
+            className="text-center lg:text-start"
           >
             <span className="mb-5 inline-flex size-12 items-center justify-center rounded-2xl bg-white text-[var(--Primary)] shadow-sm">
               <BrainCircuit className="size-6" />
@@ -54,7 +57,7 @@ function SmartCare() {
             <p className="mx-auto mt-5 max-w-xl text-sm leading-8 text-slate-600 sm:text-base lg:mr-0">
               {t("description")}
             </p>
-            <div className="mt-6 grid gap-3 text-right sm:grid-cols-3">
+            <div className="mt-6 grid gap-3 text-start sm:grid-cols-3">
               {["insight", "followUp", "reminders"].map((item) => (
                 <div
                   key={item}

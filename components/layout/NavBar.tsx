@@ -8,6 +8,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { NAVIGATION_LINKS } from "@/types/navLinks";
 import ActionButton from "@/components/common/ActionButton";
+import { getNextLocale, routing } from "@/i18n/routing";
 
 function NavBar() {
   const { locale } = useParams<{ locale: string }>();
@@ -17,8 +18,9 @@ function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const switchLocale = () => {
-    const nextLocale = locale === "ar" ? "en" : "ar";
-    const pathWithoutLocale = pathname.replace(`/${locale}`, "") || "/";
+    const nextLocale = getNextLocale(routing.locales, locale);
+    const pathWithoutLocale =
+      pathname.replace(new RegExp(`^/${locale}(?=/|$)`), "") || "/";
     router.push(`/${nextLocale}${pathWithoutLocale}`);
   };
 
